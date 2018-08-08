@@ -416,6 +416,12 @@
           <span class="line">&lt;/lido:termMaterialsTech></span>
         </code>
       </samp>
+      <h4>Ereignis: "Besitz"</h4>
+      <code>lido:eventWrap/lido:eventSet[lido:event/lido:eventType/lido:term = 'Besitz']</code>
+      <p>
+        Das Ereignis ist durch die natürlichsprachige Bezeichnung <code>Besitz</code> identifiziert. Für jeden früheren
+        Besitzer wird ein separates Ereignis angebeben.
+      </p>
       <h4>Ereignis: "Austellungen"</h4>
       <code>lido:eventWrap/lido:eventSet[lido:event/lido:eventType/lido:term = 'Austellung']</code>
       <p>
@@ -800,7 +806,6 @@
       <ul>
         <li>Assoziierte Person</li>
         <li>Eigentum</li>
-        <li>Früherer Besitzer</li>
         <li>Kontext</li>
         <li>Manuskriptnotiz</li>
         <li>Provenienz</li>
@@ -821,6 +826,10 @@
           <tr>
             <th>25.04.2018</th>
             <td>Beispiele mit lido:subjectSet korrigiert</td>
+          </tr>
+          <tr>
+            <th>08.08.2018</th>
+            <td>Ereignis 'Besitz' mit früheren Besitzern wird exportiert</td>
           </tr>
         </tbody>
       </table>

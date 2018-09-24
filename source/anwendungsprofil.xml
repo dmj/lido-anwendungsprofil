@@ -1,0 +1,167 @@
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" xml:lang="de">
+  <info>
+    <title>LIDO-Anwendungsprofil des Virtuellen Kupferstichkabinetts</title>
+    <biblioid class="doi">10.5281/zenodo.1219143</biblioid>
+    <biblioid class="uri">http://diglib.hab.de?link=vkk-lido</biblioid>
+    <author>
+      <personname>David Maus</personname>
+      <affiliation>
+        <org>
+          <orgname>Herzog August Bibliothek Wolfenbüttel</orgname>
+        </org>
+      </affiliation>
+      <email>maus@hab.de</email>
+    </author>
+    <othercredit>
+      <personname>Judith Tralles</personname>
+      <contrib>Beiträger</contrib>
+      <affiliation>
+        <org>
+          <orgname>Herzog August Bibliothek Wolfenbüttel</orgname>
+        </org>
+      </affiliation>
+      <email>tralles@hab.de</email>
+    </othercredit>
+  </info>
+  <section>
+    <title>Gültigkeitsbereich</title>
+    <para>
+      Dieses Anwendungsprofil gilt für im Rahmen des Projektes <link
+      xlink:href="http://diglib.hab.de/?link=046">Virtuelles Kupferstichkabinett</link>
+      bereitgestellten Erschließungsdaten. Die Datensätze können über eine <link
+      xlink:href="http://www.virtuelles-kupferstichkabinett.de/service/oai?verb=Identify">OAI-Schnittstelle</link>
+      abgerufen werden.
+    </para>
+  </section>
+  <section>
+    <title>Exportierte Daten</title>
+    <section>
+      <title>Administrative Metadaten</title>
+      <section>
+        <title>Identifikation des LIDO-Datensatzes</title>
+        <para>
+          Der Identifikator des LIDO-Datensatzes ist aus dem Präfix
+          <code>lido:virtuelles-kupferstichkabinett.de:</code> und der internen Blattnummer
+          gebildet. Das Attribute <tag class="attribute">lido:type</tag> ist mit dem Wert <tag
+          class="attvalue">local</tag> belegt.
+        </para>
+      </section>
+      <section>
+        <title>Identifikation des lokalen Datensatzes</title>
+        <para>
+          Der lokale Datensatz ist durch die interne Blattnummer identifiziert. Das Attribute <tag
+          class="attribute">lido:type</tag> ist mit dem Wert <tag class="attvalue">local</tag>
+          belegt.
+        </para>
+      </section>
+      <section>
+        <title>Typ des beschriebenen Objektes</title>
+        <para>
+          Der Typ des beschriebenen Objekts ist immer mit dem Begriff <code>Einzelobjekt</code> angegeben.
+        </para>
+      </section>
+    </section>
+  </section>
+  <appendix>
+    <title>Anhang</title>
+    <table>
+      <caption>Codes verwendeter Normdatensysteme</caption>
+      <tbody>
+        <tr><td>Getty Art &amp; Architecture Thesaurus</td><td>aat</td></tr>
+        <tr><td>Gemeinsame Normdatei</td><td>gnd</td></tr>
+        <tr><td>Getty Thesaurus of Geographic Names</td><td>tgn</td></tr>
+        <tr><td>Union List of Artist Names</td><td>ulan</td></tr>
+        <tr><td>International Standard Identifier for Libraries and Related Organizations</td><td>isil</td></tr>
+        <tr><td>Iconclass-Klassifikation</td><td>iconclass</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <caption>Rollen von Personen und Orten</caption>
+      <tbody>
+        <tr><td>Person</td><td>Maler</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Verleger</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Zeichner</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Inventor</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Dedikator</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Widmungsempfänger</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Verfasser des Textes (Inschrift)</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Stecher</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Dargestellte Person</td><td>Dargestellte Person</td></tr>
+        <tr><td>Person</td><td>Dichter</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Drucker</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Frühere Zuschreibung</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Typograph</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Formschneider</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Auftraggeber</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Inventor des ursprünglichen Entwurfs</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Verfasser des Bildprogramms</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Besitzer der Vorlage</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Stecher der Vorlage</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Eigner des Wappens</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Nicht definiert</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Früherer Besitzer</td><td>Früherer Besitzer</td></tr>
+        <tr><td>Person</td><td>Stifter</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Kolorist</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Kalligraph</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Verfasser eines handschriftlichen Vermerks</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Händler</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Maler der Vorlage</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Verfasser der Textvorlage</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Zeichner der Vorlage</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Sekretär</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Verfasser des Textes (Kontext)</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Herausgeber</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Architekt</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Bildhauer</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Produktionsleiter</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Auf Kosten von</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Komponist</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Erwähnte Person</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Zuschreibung</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Zeichner / Inventor</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Schreiber</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Alternative Zuschreibung</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Traditionelle Zuschreibung</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Autor</td><td>Assoziierte Person</td></tr>
+        <tr><td>Person</td><td>Lithograph</td><td>Künstler/Hersteller</td></tr>
+        <tr><td>Person</td><td>Verfasser des Kontext</td><td>Assoziierte Person</td></tr>
+      </tbody>
+      <tbody>
+        <tr><td>Ort</td><td>Dargestellter Ort</td><td>Dargestellter Ort</td></tr>
+        <tr><td>Ort</td><td>Verlagsort</td><td></td></tr>
+        <tr><td>Ort</td><td>Entstehungsort der Platte</td><td>Ort der Herstellung</td></tr>
+        <tr><td>Ort</td><td>Genannter Ort</td><td></td></tr>
+        <tr><td>Ort</td><td>Impliziter Ortsbezug</td><td></td></tr>
+        <tr><td>Ort</td><td>Dargestelltes Bauwerk</td><td>Dargestelltes Bauwerk</td></tr>
+        <tr><td>Ort</td><td>Entstehungsort der Zeichnung</td><td>Ort der Herstellung</td></tr>
+        <tr><td>Ort</td><td>Herstellungsort</td><td>Ort der Herstellung</td></tr>
+      </tbody>
+    </table>
+    <table>
+      <caption>Qualifizierung von Personenrollen</caption>
+      <tbody>
+        <tr><td>Zuschreibung</td></tr>
+        <tr><td>Mögliche Zuschreibung</td></tr>
+        <tr><td>Ehemalige Zuschreibung</td></tr>
+        <tr><td>Alternative Zuschreibung</td></tr>
+        <tr><td>Abgelehnte Zuschreibung</td></tr>
+        <tr><td>Traditionelle Zuschreibung</td></tr>
+        <tr><td>Wahrscheinliche Zuschreibung</td></tr>
+      </tbody>
+    </table>
+    <itemizedlist>
+      <title>Beim Export nicht berücksichtige Eigenschaften</title>
+      <listitem><para>Assoziierte Person</para></listitem>
+      <listitem><para>Eigentum</para></listitem>
+      <listitem><para>Kontext</para></listitem>
+      <listitem><para>Manuskriptnotiz</para></listitem>
+      <listitem><para>Provenienz</para></listitem>
+      <listitem><para>Sammelband</para></listitem>
+      <listitem><para>Sammlermarke</para></listitem>
+      <listitem><para>Technik (Freitext)</para></listitem>
+      <listitem><para>Trägermaterial (Freitext)</para></listitem>
+      <listitem><para>Verweis</para></listitem>
+      <listitem><para>Wasserzeichen</para></listitem>
+    </itemizedlist>
+  </appendix>
+</article>

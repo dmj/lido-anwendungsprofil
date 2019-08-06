@@ -3,6 +3,18 @@
     <title>LIDO-Anwendungsprofil des Virtuellen Kupferstichkabinetts</title>
     <biblioid class="doi">10.5281/zenodo.1219143</biblioid>
     <biblioid class="uri">http://diglib.hab.de?link=vkk-lido</biblioid>
+    <revhistory>
+      <revision>
+        <revnumber>1.0</revnumber>
+        <date>10. April 2018</date>
+        <authorinitials>dmaus</authorinitials>
+        <revdescription>
+          <para>
+            Version 1.0 als XHTML-Dokument veröffentlicht.
+          </para>
+        </revdescription>
+      </revision>
+    </revhistory>
     <author>
       <personname>David Maus</personname>
       <affiliation>
@@ -60,108 +72,389 @@
           Der Typ des beschriebenen Objekts ist immer mit dem Begriff <code>Einzelobjekt</code> angegeben.
         </para>
       </section>
+      <section>
+        <title>Quelle der Objektinformation</title>
+        <para>
+          Es ist die <acronym>ISIL</acronym> der für die Informationen des Datensatzes
+          verantwortlichen Einrichtung angegeben.
+        </para>
+      </section>
+      <section>
+        <title>Rechte am Datensatz</title>
+        <para>
+          Die Lizenzbestimmungen des LIDO-Datensatzes sind als Begriff <code>CC0</code> (Datensätze
+          der HAB) bzw. <code>Alle Rechte vorbehalten</code> (Datensätze des HAUM) zusammen mit der
+          <acronym>ISIL</acronym> der erfassenden Einrichtung angegeben.
+        </para>
+      </section>
+      <section>
+        <title>Änderungsdatum des Datensatzes</title>
+        <para>
+          Datum und Uhrzeit der letzten Datensatzänderung sind als Zeitangabe nach ISO-8601 in der
+          Form <code>YYYY-MM-DDThh:mm:ssZ</code> angegeben.
+        </para>
+      </section>
+    </section>
+    <section>
+      <title>Deskriptive Metadaten</title>
+      <section>
+        <title>Gattung des beschriebenen Objekts</title>
+        <para>
+          Die Gattung des Objekts wird als kodierter Wert des Art &amp; Architecture Thesaurus (AAT)
+          und als natürlichsprachiger Begriff angegeben. In der Grafikdatenbank werden Druckgrafiken
+          (AAT 300041273), Zeichnungen (AAT 300041273) und Fotografien (AAT 300046300) nachgewiesen.
+        </para>
+      </section>
+      <section>
+        <title>Signatur und besitzende Einrichtung</title>
+        <para>
+          Die Signatur wird wie vorgefunden wiedergegeben. Die besitzende Einrichtung wird als
+          kodierter Wert in Form ihrer <acronym>ISIL</acronym> angegeben. Die aktuelle Signatur ist
+          durch Belegung des Attributes <tag class="attribute">lido:type</tag> mit dem Wert <tag
+          class="attvalue">current</tag>, frühere Signaturen durch die Belegung mit dem Wert <tag
+          class="attvalue">former</tag> gekennzeichnet.
+        </para>
+      </section>
+      <section>
+        <title>Name und Titel des Objektes</title>
+        <para>
+          Jedes Objekt besitzt einen bevorzugten Namen, der aus dem Begriff der Objektgattung und
+          der aktuellen Signatur zusammengesetzt ist. Ist für das Objekt ein Titel verzeichnet, so
+          wird dieser als zweites <tag class="element">lido:titleSet</tag> aufgeführt. Ist das
+          Objekt Teil einer Serie, so wird Serie und Blattnummer als drittes <tag
+          class="element">lido:titleSet</tag> genannt.
+        </para>
+      </section>
+      <section>
+        <title>Inschrift (Texteinträge auf der Platte)</title>
+        <para>
+          Inschriften sind durch die Belegung des <tag class="attribute">lido:type</tag>-Attributs
+          mit dem Wert <tag class="attvalue">inscription</tag> gekennzeichnet.
+        </para>
+      </section>
+      <section>
+        <title>Anmerkungen</title>
+        <para>
+          Anmerkungen sind in einem <tag class="element">lido:descriptiveNoteValue</tag>-Element
+          natürlichsprachig angegeben.
+        </para>
+      </section>
+      <section>
+        <title>Ereignisse</title>
+        <section>
+          <title>Herstellung/Erschaffung</title>
+          <para>
+            Das Ereignis ist durch die natürlichsprachige Bezeichnung
+            <code>Herstellung/Erschaffung</code> identifiziert.
+          </para>
+          <section>
+            <title>Personen</title>
+            <para>
+              Alle Personen, deren Rolle der Kategorie <code>Künstler/Herrsteller</code> zugeordnet
+              ist.
+            </para>
+            <para>
+              Für jede Person ist der in der Datenbank eingetragene Anzeigename, und, wenn
+              vorhanden, ein oder mehrere typisierte Identifikatoren angegeben. Die Rolle und eine
+              sie näher qualifizierende Bestimmung sind als natürlichsprachige Bezeichnungen
+              angegeben.
+            </para>
+          </section>
+          <section>
+            <title>Orte</title>
+            <para>
+              Alle Orte, deren Rolle der Kategorie <code>Ort der Herstellung</code> zugeordnet ist.
+            </para>
+            <para>
+              Für jeden Ort ist der in der Datenbank eingetragene Anzeigename, und, wenn vorhanden,
+              ein oder mehrere typisierte Identifikatoren angegeben. Die Rolle ist als
+              natürlichsprachige Bezeichnungen angegeben.
+            </para>
+          </section>
+          <section>
+            <title>Schule und kulturelle Zuordnung</title>
+            <para>
+              Schule und kulturelle Zuordnung werden als natürlichsprachige Bezeichnung angegeben.
+            </para>
+          </section>
+          <section>
+            <title>Trägermaterial, Technik und Drucktechnik</title>
+            <para>
+              Angaben zu Trägermaterial, Technik und Drucktechnik sind als natürlichsprachige
+              Bezeichnungen angegeben. Zur Unterscheidung ist das Attribute <tag
+              class="attribute">lido:type</tag> mit folgenden Werten belegt.
+            </para>
+            <table>
+              <caption>Codeliste Trägermaterial, Technik und Drucktechnik</caption>
+              <tbody>
+                <tr>
+                  <td>material</td>
+                  <td>Trägermaterial</td>
+                </tr>
+                <tr>
+                  <td>technique</td>
+                  <td>Technik</td>
+                </tr>
+                <tr>
+                  <td>printing technique</td>
+                  <td>Drucktechnik</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section>
+          <title>Besitz</title>
+          <para>
+            Das Ereignis ist durch die natürlichsprachige Bezeichnung <code>Besitz</code>
+            identifiziert. Für jeden früheren Besitzer wird ein separates Ereignis angebeben.
+          </para>
+          <section>
+            <title>Personen</title>
+            <para>
+              Alle Personen, deren Rolle der Kategorie <code>Früherer Besitzer</code> zugeordnet
+              ist.
+            </para>
+            <para>
+              Für jede Person ist der in der Datenbank eingetragene Anzeigename, und, wenn
+              vorhanden, ein oder mehrere typisierte Identifikatoren angegeben. Die Rolle und eine
+              sie näher qualifizierende Bestimmung sind als natürlichsprachige Bezeichnungen
+              angegeben.
+            </para>
+          </section>
+        </section>
+        <section>
+          <title>Austellungen</title>
+          <para>
+            Das Ereignis ist durch die natürlichsprachige Bezeichnung <code>Ausstellung</code>
+            identifiziert. Informationen zur Ausstellung sind als Anzeigeelement angegeben.
+          </para>
+        </section>
+      </section>
+      <section>
+        <title>Objektmaße</title>
+        <para>
+          Höhe und Breite bzw. Durchmesser des Objekts sind separat für Platte und Blatt
+          (Druckgrafik) bzw. Zeichnung und Montierung (Zeichnung) angegeben.
+        </para>
+      </section>
+      <section>
+        <title>Klassifikation und Beschlagwortung</title>
+        <section>
+          <title>Klassifikation nach ICONCLASS</title>
+          <para>
+            Die Klassifikation der Bildinhalte nach ICONCLASS ist als kodierter Wert zusammen mit
+            der bevorzugen natürlichsprachigen Bezeichnung angegeben.
+          </para>
+          <para>
+            Die mit der Klassifikation verbundenen deutschsprachigen Schlagwörter sind als
+            natürlichsprachige Bezeichnung aufgeführt und mit Belegung des <tag
+            class="attribute">lido:addedSearchTerm</tag>-Attributes mit dem Wert <tag
+            class="attvalue">yes</tag> gekennzeichnet.
+          </para>
+        </section>
+        <section>
+          <title>Schlagwörter</title>
+          <para>
+            Schlagwörter sind als natürlichsprachige Bezeichnung angegeben.
+          </para>
+        </section>
+        <section>
+          <title>Dargestellte Personen</title>
+          <para>
+            Alle Personen, deren Rolle der Kategorie <code>Dargestellte Person</code> zugeordnet
+            ist.
+          </para>
+          <para>
+            Für jede Person ist der in der Datenbank eingetragene Anzeigename, und, wenn
+            vorhanden, ein oder mehrere typisierte Identifikatoren angegeben. Die Rolle und eine
+            sie näher qualifizierende Bestimmung sind als natürlichsprachige Bezeichnungen
+            angegeben.
+          </para>
+        </section>
+        <section>
+          <title>Dargestellte Orte</title>
+          <para>
+            Alle Orte, deren Rolle der Kategorie <code>Dargestellter Ort</code> zugeordnet ist.
+          </para>
+          <para>
+            Für jeden Ort ist der in der Datenbank eingetragene Anzeigename, und, wenn vorhanden,
+            ein oder mehrere typisierte Identifikatoren angegeben. Die Rolle ist als
+            natürlichsprachige Bezeichnungen angegeben.
+          </para>
+        </section>
+        <section>
+          <title>Dargestellte Bauwerke</title>
+          <para>
+            Alle Orte, deren Rolle der Kategorie <code>Dargestelltes Bauwerk</code> zugeordnet ist.
+          </para>
+          <para>
+            Für jeden Ort ist der in der Datenbank eingetragene Anzeigename, und, wenn vorhanden,
+            ein oder mehrere typisierte Identifikatoren angegeben. Die Rolle ist als
+            natürlichsprachige Bezeichnungen angegeben.
+          </para>
+        </section>
+      </section>
+      <section>
+        <title>Beziehung zur anderen Objekten</title>
+        <para>
+          Die Objektbeziehungen sind nur als eine für die Anzeige konzipierte natürlichsprachige
+          Bezeichnung angegeben. Über das Attribute <tag class="attribute">lido:sortorder</tag> kann
+          eine Reihenfolge aller Objektbeziehungen gleichen Typs angezeigt sein. Der Typ der
+          Objektbeziehung ist als einer der folgenden natürlichsprachigen Begriffe angegeben.
+        </para>
+        <table>
+          <caption>Begriffe für beziehung zu Objekten</caption>
+          <tbody>
+            <tr>
+              <td><code>beschrieben in</code></td>
+              <td>das Objekt wird in der aufgeführten Literatur beschrieben</td>
+            </tr>
+            <tr>
+              <td><code>Teil von</code></td>
+              <td>das Objekt ist Teil eines übergeordneten Zusammenhangs</td>
+            </tr>
+            <tr>
+              <td><code>hat Vorlage</code></td>
+              <td>das Objekt hat das aufgeführte Objekt zu seiner Vorlage</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+    <section>
+      <title></title>
+      <para>
+        Für jedes Objekt werden Links zu digitalen Reproduktionen angegeben. Die Art der digitalen
+        Reproduktion wird durch Belegung des <tag class="attribute">lido:type</tag>-Attributs, der
+        Medientyp des Linkziels durch das <tag class="attribute">lido:formatResource</tag>-Attribut
+        angegeben. Die Nutzungslizenz wird als natürlichsprachige Bezeichnung und der Rechteinhaber
+        als kodierter Wert in Form der <acronym>ISIL</acronym> angegeben.
+      </para>
+      <table>
+        <caption>Typen digitaler Reproduktion</caption>
+        <tbody>
+          <tr>
+            <td><tag class="attvalue">purl</tag></td>
+            <td>Persistente URL des Digitalisats</td>
+          </tr>
+          <tr>
+            <td><tag class="attvalue">display</tag></td>
+            <td>URL der JPEG-Grafik in höchster Auflösung</td>
+          </tr>
+          <tr>
+            <td><tag class="attvalue">thumbnail</tag></td>
+            <td>URL des Vorschaubilds</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </section>
   <appendix>
     <title>Anhang</title>
-    <table>
-      <caption>Codes verwendeter Normdatensysteme</caption>
-      <tbody>
-        <tr><td>Getty Art &amp; Architecture Thesaurus</td><td>aat</td></tr>
-        <tr><td>Gemeinsame Normdatei</td><td>gnd</td></tr>
-        <tr><td>Getty Thesaurus of Geographic Names</td><td>tgn</td></tr>
-        <tr><td>Union List of Artist Names</td><td>ulan</td></tr>
-        <tr><td>International Standard Identifier for Libraries and Related Organizations</td><td>isil</td></tr>
-        <tr><td>Iconclass-Klassifikation</td><td>iconclass</td></tr>
-      </tbody>
-    </table>
-    <table>
-      <caption>Rollen von Personen und Orten</caption>
-      <tbody>
-        <tr><td>Person</td><td>Maler</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Verleger</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Zeichner</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Inventor</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Dedikator</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Widmungsempfänger</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Verfasser des Textes (Inschrift)</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Stecher</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Dargestellte Person</td><td>Dargestellte Person</td></tr>
-        <tr><td>Person</td><td>Dichter</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Drucker</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Frühere Zuschreibung</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Typograph</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Formschneider</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Auftraggeber</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Inventor des ursprünglichen Entwurfs</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Verfasser des Bildprogramms</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Besitzer der Vorlage</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Stecher der Vorlage</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Eigner des Wappens</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Nicht definiert</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Früherer Besitzer</td><td>Früherer Besitzer</td></tr>
-        <tr><td>Person</td><td>Stifter</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Kolorist</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Kalligraph</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Verfasser eines handschriftlichen Vermerks</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Händler</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Maler der Vorlage</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Verfasser der Textvorlage</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Zeichner der Vorlage</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Sekretär</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Verfasser des Textes (Kontext)</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Herausgeber</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Architekt</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Bildhauer</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Produktionsleiter</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Auf Kosten von</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Komponist</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Erwähnte Person</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Zuschreibung</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Zeichner / Inventor</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Schreiber</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Alternative Zuschreibung</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Traditionelle Zuschreibung</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Autor</td><td>Assoziierte Person</td></tr>
-        <tr><td>Person</td><td>Lithograph</td><td>Künstler/Hersteller</td></tr>
-        <tr><td>Person</td><td>Verfasser des Kontext</td><td>Assoziierte Person</td></tr>
-      </tbody>
-      <tbody>
-        <tr><td>Ort</td><td>Dargestellter Ort</td><td>Dargestellter Ort</td></tr>
-        <tr><td>Ort</td><td>Verlagsort</td><td></td></tr>
-        <tr><td>Ort</td><td>Entstehungsort der Platte</td><td>Ort der Herstellung</td></tr>
-        <tr><td>Ort</td><td>Genannter Ort</td><td></td></tr>
-        <tr><td>Ort</td><td>Impliziter Ortsbezug</td><td></td></tr>
-        <tr><td>Ort</td><td>Dargestelltes Bauwerk</td><td>Dargestelltes Bauwerk</td></tr>
-        <tr><td>Ort</td><td>Entstehungsort der Zeichnung</td><td>Ort der Herstellung</td></tr>
-        <tr><td>Ort</td><td>Herstellungsort</td><td>Ort der Herstellung</td></tr>
-      </tbody>
-    </table>
-    <table>
-      <caption>Qualifizierung von Personenrollen</caption>
-      <tbody>
-        <tr><td>Zuschreibung</td></tr>
-        <tr><td>Mögliche Zuschreibung</td></tr>
-        <tr><td>Ehemalige Zuschreibung</td></tr>
-        <tr><td>Alternative Zuschreibung</td></tr>
-        <tr><td>Abgelehnte Zuschreibung</td></tr>
-        <tr><td>Traditionelle Zuschreibung</td></tr>
-        <tr><td>Wahrscheinliche Zuschreibung</td></tr>
-      </tbody>
-    </table>
-    <itemizedlist>
-      <title>Beim Export nicht berücksichtige Eigenschaften</title>
-      <listitem><para>Assoziierte Person</para></listitem>
-      <listitem><para>Eigentum</para></listitem>
-      <listitem><para>Kontext</para></listitem>
-      <listitem><para>Manuskriptnotiz</para></listitem>
-      <listitem><para>Provenienz</para></listitem>
-      <listitem><para>Sammelband</para></listitem>
-      <listitem><para>Sammlermarke</para></listitem>
-      <listitem><para>Technik (Freitext)</para></listitem>
-      <listitem><para>Trägermaterial (Freitext)</para></listitem>
-      <listitem><para>Verweis</para></listitem>
-      <listitem><para>Wasserzeichen</para></listitem>
-    </itemizedlist>
+    <section>
+      <title>Tabellen</title>
+      <table>
+        <caption>Codes verwendeter Normdatensysteme</caption>
+        <tbody>
+          <tr><td>Getty Art &amp; Architecture Thesaurus</td><td>aat</td></tr>
+          <tr><td>Gemeinsame Normdatei</td><td>gnd</td></tr>
+          <tr><td>Getty Thesaurus of Geographic Names</td><td>tgn</td></tr>
+          <tr><td>Union List of Artist Names</td><td>ulan</td></tr>
+          <tr><td>International Standard Identifier for Libraries and Related Organizations</td><td>isil</td></tr>
+          <tr><td>Iconclass-Klassifikation</td><td>iconclass</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Rollen von Personen und Orten</caption>
+        <tbody>
+          <tr><td>Person</td><td>Maler</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Verleger</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Zeichner</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Inventor</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Dedikator</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Widmungsempfänger</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Verfasser des Textes (Inschrift)</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Stecher</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Dargestellte Person</td><td>Dargestellte Person</td></tr>
+          <tr><td>Person</td><td>Dichter</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Drucker</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Frühere Zuschreibung</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Typograph</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Formschneider</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Auftraggeber</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Inventor des ursprünglichen Entwurfs</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Verfasser des Bildprogramms</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Besitzer der Vorlage</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Stecher der Vorlage</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Eigner des Wappens</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Nicht definiert</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Früherer Besitzer</td><td>Früherer Besitzer</td></tr>
+          <tr><td>Person</td><td>Stifter</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Kolorist</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Kalligraph</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Verfasser eines handschriftlichen Vermerks</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Händler</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Maler der Vorlage</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Verfasser der Textvorlage</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Zeichner der Vorlage</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Sekretär</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Verfasser des Textes (Kontext)</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Herausgeber</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Architekt</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Bildhauer</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Produktionsleiter</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Auf Kosten von</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Komponist</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Erwähnte Person</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Zuschreibung</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Zeichner / Inventor</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Schreiber</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Alternative Zuschreibung</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Traditionelle Zuschreibung</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Autor</td><td>Assoziierte Person</td></tr>
+          <tr><td>Person</td><td>Lithograph</td><td>Künstler/Hersteller</td></tr>
+          <tr><td>Person</td><td>Verfasser des Kontext</td><td>Assoziierte Person</td></tr>
+        </tbody>
+        <tbody>
+          <tr><td>Ort</td><td>Dargestellter Ort</td><td>Dargestellter Ort</td></tr>
+          <tr><td>Ort</td><td>Verlagsort</td><td></td></tr>
+          <tr><td>Ort</td><td>Entstehungsort der Platte</td><td>Ort der Herstellung</td></tr>
+          <tr><td>Ort</td><td>Genannter Ort</td><td></td></tr>
+          <tr><td>Ort</td><td>Impliziter Ortsbezug</td><td></td></tr>
+          <tr><td>Ort</td><td>Dargestelltes Bauwerk</td><td>Dargestelltes Bauwerk</td></tr>
+          <tr><td>Ort</td><td>Entstehungsort der Zeichnung</td><td>Ort der Herstellung</td></tr>
+          <tr><td>Ort</td><td>Herstellungsort</td><td>Ort der Herstellung</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Qualifizierung von Personenrollen</caption>
+        <tbody>
+          <tr><td>Zuschreibung</td></tr>
+          <tr><td>Mögliche Zuschreibung</td></tr>
+          <tr><td>Ehemalige Zuschreibung</td></tr>
+          <tr><td>Alternative Zuschreibung</td></tr>
+          <tr><td>Abgelehnte Zuschreibung</td></tr>
+          <tr><td>Traditionelle Zuschreibung</td></tr>
+          <tr><td>Wahrscheinliche Zuschreibung</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Beim Export nicht berücksichtige Eigenschaften</caption>
+        <tbody>
+          <tr><td>Assoziierte Person</td></tr>
+          <tr><td>Eigentum</td></tr>
+          <tr><td>Kontext</td></tr>
+          <tr><td>Manuskriptnotiz</td></tr>
+          <tr><td>Provenienz</td></tr>
+          <tr><td>Sammelband</td></tr>
+          <tr><td>Sammlermarke</td></tr>
+          <tr><td>Technik (Freitext)</td></tr>
+          <tr><td>Trägermaterial (Freitext)</td></tr>
+          <tr><td>Verweis</td></tr>
+          <tr><td>Wasserzeichen</td></tr>
+        </tbody>
+      </table>
+    </section>
   </appendix>
 </article>
